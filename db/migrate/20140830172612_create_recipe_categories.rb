@@ -3,7 +3,7 @@ class CreateRecipeCategories < ActiveRecord::Migration
     create_table :recipe_categories do |t|
       t.references :recipe, index: true
       t.references :category, index: true
-
+      t.references :ranking, index: true
       t.timestamps
     end
   end

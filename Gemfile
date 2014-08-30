@@ -13,6 +13,7 @@ gem "sqlite3"
 gem "inherited_resources"
 gem "devise"
 gem "carrierwave"
+gem "pg"
 gem "factory_girl_rails"
 gem "simple_form"
 gem 'underscore-rails'

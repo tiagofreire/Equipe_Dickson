@@ -9,4 +9,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
 
+  def votar_em_categoria(ranking, recipe_id, category_id)
+ 	ranking.user = self
+ 	rc = RecipeCategory.new
+ 	rc.recipe_id = recipe_id
+ 	rc.category_id = category_id
+ 	rc.ranking = ranking
+ 	rc.save
+  end
+
 end
