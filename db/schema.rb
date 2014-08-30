@@ -11,16 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140830154332) do
+ActiveRecord::Schema.define(version: 20140830172612) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "categories", ["recipe_id"], name: "index_categories_on_recipe_id"
 
   create_table "rankings", force: true do |t|
     t.integer  "user_id"
@@ -33,6 +30,16 @@ ActiveRecord::Schema.define(version: 20140830154332) do
 
   add_index "rankings", ["category_id"], name: "index_rankings_on_category_id"
   add_index "rankings", ["user_id"], name: "index_rankings_on_user_id"
+
+  create_table "recipe_categories", force: true do |t|
+    t.integer  "recipe_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "recipe_categories", ["category_id"], name: "index_recipe_categories_on_category_id"
+  add_index "recipe_categories", ["recipe_id"], name: "index_recipe_categories_on_recipe_id"
 
   create_table "recipes", force: true do |t|
     t.string   "name"
