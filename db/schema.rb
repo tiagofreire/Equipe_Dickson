@@ -12,19 +12,24 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20140830172612) do
+<<<<<<< HEAD
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+=======
+>>>>>>> c8a98a4ec6f45056c5e59b5ff1290c6a6cab0dfc
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   add_index "categories", ["recipe_id"], name: "index_categories_on_recipe_id", using: :btree
 
+=======
+>>>>>>> c8a98a4ec6f45056c5e59b5ff1290c6a6cab0dfc
   create_table "rankings", force: true do |t|
     t.integer  "user_id"
     t.integer  "category_id"
@@ -48,6 +53,16 @@ ActiveRecord::Schema.define(version: 20140830172612) do
   add_index "recipe_categories", ["category_id"], name: "index_recipe_categories_on_category_id", using: :btree
   add_index "recipe_categories", ["ranking_id"], name: "index_recipe_categories_on_ranking_id", using: :btree
   add_index "recipe_categories", ["recipe_id"], name: "index_recipe_categories_on_recipe_id", using: :btree
+
+  create_table "recipe_categories", force: true do |t|
+    t.integer  "recipe_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "recipe_categories", ["category_id"], name: "index_recipe_categories_on_category_id"
+  add_index "recipe_categories", ["recipe_id"], name: "index_recipe_categories_on_recipe_id"
 
   create_table "recipes", force: true do |t|
     t.string   "name"
