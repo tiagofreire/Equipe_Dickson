@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  encoding: UTF-8
+  encoding: SQL_ASCII
   database: hacknfortes_development
   pool: 5
   username: postgres
@@ -8,7 +8,7 @@ development:
 
 test:
   adapter: postgresql
-  encoding: UTF-8
+  encoding: SQL_ASCII
   database: hacknfortes_test
   pool: 10
   username: postgres
