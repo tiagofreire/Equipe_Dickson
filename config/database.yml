@@ -1,23 +1,11 @@
 development:
-  adapter: postgresql
-  encoding: SQL_ASCII
-  database: hacknfortes_development
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: postgres
-  password: 23Tfa023
-
+  timeout: 5000
+  
 test:
-  adapter: postgresql
-  encoding: SQL_ASCII
-  database: hacknfortes_test
-  pool: 10
-  username: postgres
-  password: 23Tfa023
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: hacknfortes_production
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  username: postgres
-  password: 23Tfa023
+  timeout: 5000

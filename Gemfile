@@ -9,7 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem "pg"
+gem "sqlite3"
 gem "inherited_resources"
 gem "devise"
 gem "carrierwave"
