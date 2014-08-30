@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Static Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../resource/css/navbar-static-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../resource/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dickson</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Receitas</a></li>
+            <li><a href="#about">Ranking</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar-fixed-top/">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h1>Cadastrar Receita</h1>
+      <form role="form">
+         <div class="form-group">
+          <label for="exampleInputEmail1">Titulo</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Titulo" required>
+        </div>
+         <div class="form-group">
+          <label for="exampleInputEmail1">Descrição</label>
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="disabledSelect">Categoria</label>
+          <select id="disabledSelect" class="form-control">
+            <option>Selecione</option>
+            <option>Vagetariano</option>   
+            <option>Massas</option>
+            <option>Sopas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          
+            <button type="submit" class="btn btn-default">Salvar</button>
+          
+        </div>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../resource/js/bootstrap.min.js"></script>
+  </body>
+</html>
