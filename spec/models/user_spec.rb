@@ -2,10 +2,8 @@ require 'spec_helper'
 
 describe User do
 
-  describe "Should respond to" do
-    it { should respond_to(:encrypted_password) }
-    it { should respond_to(:email) }
-    it { should respond_to(:name) }
+  describe "vota em categoria" do
+    
   end
 
   describe "Validations" do
